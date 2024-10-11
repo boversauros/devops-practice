@@ -10,7 +10,7 @@ Each project is contained in its own directory under the `projects/` folder.
 
 ### Beginner Projects
 
-1. Server Performance Stats
+1. [Server Performance Stats](https://roadmap.sh/projects/server-stats) ✅
 2. Log Archive Tool
 3. [Nginx Log Analyser](https://roadmap.sh/projects/nginx-log-analyser) ✅
 4. GitHub Pages Deployment
