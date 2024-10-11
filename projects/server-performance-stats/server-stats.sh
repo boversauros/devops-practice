@@ -65,3 +65,12 @@ print_header 'Top 5 Processes by CPU Usage'
 ps -eo pcpu,pid,user,comm | sort -k1 -nr | head -n 6 | tail -n 5 | awk '
     BEGIN {printf "%-6s %-5s %-12s %s\n", "CPU%", "PID", "USER", "COMMAND"}
     {printf "%-6.1f %-5s %-12s %s\n", $1, $2, $3, $4}'
+
+print_empty_lines 2
+
+print_header 'Top 5 Processes by Memory Usage'
+
+# Use ps command to get process information, sort by memory usage, and display top 5
+ps -eo pmem,pid,user,comm | sort -k1 -nr | head -n 6 | tail -n 5 | awk '
+    BEGIN {printf "%-7s %-5s %-12s %s\n", "MEM%", "PID", "USER", "COMMAND"}
+    {printf "%-7.1f %-5s %-12s %s\n", $1, $2, $3, $4}'
