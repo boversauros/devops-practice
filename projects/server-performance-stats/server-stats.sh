@@ -57,3 +57,11 @@ free_percent=$(echo "scale=2; 100 - $used_percent" | bc)
 echo "Total Disk Space: $total_space"
 echo "Used Disk Space: $used_space (${used_percent}%)"
 echo "Free Disk Space: $free_space (${free_percent}%)"
+
+print_empty_lines 2
+
+print_header 'Top 5 Processes by CPU Usage'
+
+ps -eo pcpu,pid,user,comm | sort -k1 -nr | head -n 6 | tail -n 5 | awk '
+    BEGIN {printf "%-6s %-5s %-12s %s\n", "CPU%", "PID", "USER", "COMMAND"}
+    {printf "%-6.1f %-5s %-12s %s\n", $1, $2, $3, $4}'
