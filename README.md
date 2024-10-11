@@ -12,7 +12,7 @@ Each project is contained in its own directory under the `projects/` folder.
 
 1. Server Performance Stats
 2. Log Archive Tool
-3. [Nginx Log Analyser](https://github.com/boversauros/devops-practice/blob/main/projects/nginx-log-analyser) ✅
+3. [Nginx Log Analyser](https://roadmap.sh/projects/nginx-log-analyser) ✅
 4. GitHub Pages Deployment
 5. SSH Remote Server Setup
 6. Static Site Server
